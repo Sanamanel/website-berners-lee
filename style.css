@@ -66,10 +66,11 @@ body {
 
 .social-list {
   list-style: none;
+  padding: 30px;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   text-align: center;
-  padding: 30px;
 }
 
 .social-link {
@@ -83,7 +84,15 @@ body {
 .social-link:focus {
   opacity: 1;
 }
-
+.text-reseau {
+  color: #949392;
+  opacity: 0.6;
+  display: block;
+}
+.text-reseau:hover,
+.text-reseau:focus {
+  opacity: 1;
+}
 .img-profil {
   width: 100px;
   height: 100px;
@@ -175,9 +184,5 @@ h2 {
     text-align: center;
     width: 100px;
     height: 150px;
-  }
-  .social-link {
-    font-size: 0.9em;
-    text-decoration: none;
   }
 }
