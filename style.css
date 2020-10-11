@@ -1,24 +1,23 @@
-/* reset*/
 * {
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
 }
-
 body {
   background-color: #ebebeb;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 0.5fr 2fr;
+  gap: 25px;
   grid-template-areas:
-    "header "
-    "social-media"
-    "content";
-  height: 150vh;
+    ".. header header .. "
+    ".. social-media social-media .. "
+    ".. content content..";
+  height: 100vh;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
   color: #858381;
@@ -54,16 +53,6 @@ body {
   box-shadow: 2px 1px 1px #a5a4a3;
 }
 
-/* box item and space between item */
-.box {
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  box-sizing: border-box;
-  padding: 20px;
-}
-
 .social-list {
   list-style: none;
   padding: 30px;
@@ -93,6 +82,7 @@ body {
 .text-reseau:focus {
   opacity: 1;
 }
+
 .img-profil {
   width: 100px;
   height: 100px;
@@ -111,11 +101,10 @@ h3 {
   text-align: center;
 }
 /* btn contact */
-.btn {
-  text-align: center;
-}
+
 .btn-rouge {
   padding: 12px 20px;
+
   background-color: #dd5555;
   color: white;
   border-radius: 10px;
@@ -125,10 +114,15 @@ h3 {
   transition: all 0.3s ease-in;
   vertical-align: middle;
 }
+.btn {
+  text-align: center;
+  padding-top: 20px;
+}
 .btn-rouge:hover {
   background: transparent;
   color: #dd5555;
   border: 2px solid #dd5555;
+  text-align: center;
 }
 
 mark {
@@ -147,15 +141,13 @@ h2 {
   height: 250px;
 }
 
-.paragraph {
-  margin-right: 20px;
-}
 .paragraph-right {
   margin-top: 20px;
 }
 .paragraph-right p {
   margin-left: 10px;
 }
+
 /* Responsive*/
 @media only screen and (max-width: 500px) {
   .grid-container {
@@ -173,7 +165,7 @@ h2 {
     font-weight: 400;
   }
   .box {
-    width: 450px;
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
